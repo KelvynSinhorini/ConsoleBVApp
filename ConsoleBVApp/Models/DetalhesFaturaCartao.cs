@@ -32,12 +32,12 @@
     public class MovimentacoesNacionai
     {
         public string nomeCliente { get; set; }
-        public string dataMovimentacao { get; set; }
+        public DateTime dataMovimentacao { get; set; }
         public string nomeEstabelecimento { get; set; }
         public int numeroParcelaMovimentacao { get; set; }
         public int quantidadeTotalParcelas { get; set; }
         public string nomeCidadeEstabelecimento { get; set; }
-        public double valorAbsolutoMovimentacaoReal { get; set; }
+        public decimal valorAbsolutoMovimentacaoReal { get; set; }
         public int valorAbsolutoMovimentacaoInternacionalDolar { get; set; }
         public string sinal { get; set; }
         public string moedaMovimentacao { get; set; }
@@ -81,14 +81,14 @@
         public double taxaPromocional { get; set; }
         public string dataVencimentoFatura { get; set; }
         public string dataHoraGeracaoFatura { get; set; }
-        public int valorTotalFatura { get; set; }
+        public decimal valorTotalFatura { get; set; }
         public double valorTotalFaturaAnterior { get; set; }
         public double valorPagamentoFaturaAnterior { get; set; }
         public int valorSaldoAnterior { get; set; }
         public int valorEncargos { get; set; }
         public double valorAjustes { get; set; }
         public double valorTotalMovimentacaoNacional { get; set; }
-        public int valorTotalNacional { get; set; }
+        public decimal valorTotalNacional { get; set; }
         public int valorTotalMovimentacaoInternacionalReal { get; set; }
         public int valorTotalMovimentacaoInternacionalDolar { get; set; }
         public string dataCotacaoDolarFatura { get; set; }
@@ -154,7 +154,7 @@
         public double proximaAnualCETPrestacao { get; set; }
         public double proximaAnualCETEspecialPrestacao { get; set; }
         public double proximaAnualCETSaquePrestacao { get; set; }
-        public int proximaTaxaClientefaturaCartaoPrestacao { get; set; }
+        public decimal proximaTaxaClientefaturaCartaoPrestacao { get; set; }
         public int proximaTaxaClienteFundos { get; set; }
         public double proximaTaxaClienteEspecialfaturaCartaoPrestacao { get; set; }
         public double proximaTaxaClienteSaquePrestacao { get; set; }
