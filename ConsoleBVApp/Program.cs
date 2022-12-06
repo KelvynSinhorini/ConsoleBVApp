@@ -130,7 +130,7 @@ namespace ConsoleBVApp
 
         private static IEnumerable<Transaction> ReadLastMonthExcel()
         {
-            var workbook = WorkBook.Load(@$"C:\Users\kelvy\OneDrive\Área de Trabalho\BV\Faturas\fatura_novembro 22.xlsx");
+            var workbook = WorkBook.Load(@$"C:\Users\kelvy\OneDrive\Área de Trabalho\BV\Faturas\fatura_dezembro 22_7226fa20-a9ea-4cef-b164-a348152c006b.xlsx");
             var sheet = workbook.WorkSheets.First(x => x.Name == "Transações");
 
             for(int i = 1; i < sheet.Rows.Length; i++)
@@ -238,13 +238,13 @@ namespace ConsoleBVApp
 
         private static void SetCellsValueInSecondSheet(ref int indexRow, WorkSheet sheet, int index, Transaction transaction, bool divideValue = false)
         {
-            sheet[$"A{indexRow}"].StringValue = transaction.Name;
+            sheet[$"A{indexRow}"].StringValue = transaction.NameTotalAmountAndNumberParcel;
 
             var sheetValue = sheet[$"B{indexRow}"];
             sheetValue.DecimalValue = divideValue ? (transaction.Value / transaction.Person.Split(",").Count()) :  transaction.Value;
             sheetValue.FormatString = IronXL.Formatting.BuiltinFormats.Currency2;
 
-            sheet[$"C{indexRow}"].StringValue = transaction.Person;
+            sheet[$"C{indexRow}"].StringValue = transaction?.Person;
         }
 
         private static void SetTotalValueAndStyle(WorkSheet sheet, int index, BorderType borderType, string borderColor)

@@ -35,13 +35,7 @@
 
             if (transaction == null) return false;
 
-            return Name == transaction.Name && 
-                (
-                    (Date.HasValue && transaction.Date.HasValue) 
-                    && 
-                    (Date.Value.Date == transaction.Date.Value.Date)
-                ) &&
-                ValueIsApproximate(transaction.Value);
+            return Name == transaction.Name && ValueIsApproximate(transaction.Value);
         }
 
         private bool ValueIsApproximate(decimal value)

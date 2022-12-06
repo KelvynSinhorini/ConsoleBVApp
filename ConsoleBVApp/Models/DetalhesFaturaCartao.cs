@@ -95,7 +95,7 @@
         public double valorCotacaoDolarFatura { get; set; }
         public double valorTotalComprasParceladasFutura { get; set; }
         public string dataVencimentoProximaFatura { get; set; }
-        public int valorPagamentoMinimo { get; set; }
+        public decimal valorPagamentoMinimo { get; set; }
         public int valorVencimentoAlternativo { get; set; }
         public int quantidadeParcelasPagamento { get; set; }
         public double valorParcelaPagamento { get; set; }
@@ -145,7 +145,7 @@
         public int taxaParcelamentoSaldoTotalProximoPeriodoAnual { get; set; }
         public int taxaCetParcelamentoSaldoTotalMensal { get; set; }
         public int taxaCetParcelamentoSaldoTotalAnual { get; set; }
-        public int taxaClientefaturaCartaoPrestacao { get; set; }
+        public decimal taxaClientefaturaCartaoPrestacao { get; set; }
         public int taxaClienteFundos { get; set; }
         public double taxaClienteEspecialfaturaCartaoPrestacao { get; set; }
         public double taxaClienteSaquePrestacao { get; set; }
